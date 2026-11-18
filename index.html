@@ -34,7 +34,7 @@
   nav ul a:hover{color:var(--maroon)}
 
   /* intro video */
-  .intro-video{width:min(980px,100%);margin:64px auto 0;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#1d1512;box-shadow:0 26px 60px -24px rgba(60,30,20,.55);outline:1px solid var(--line)}
+  .intro-video{width:min(980px,100%);margin:56px auto;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#1d1512;box-shadow:0 26px 60px -24px rgba(60,30,20,.55);outline:1px solid var(--line)}
   .intro-card{display:block;width:100%;height:100%;border:0;padding:0;background:none;cursor:pointer;position:relative}
   .intro-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,filter .4s}
   .intro-card:hover img{transform:scale(1.03);filter:brightness(.85)}
@@ -78,14 +78,16 @@
 
   /* about */
   #about{background:var(--paper-2);border-bottom:1px solid var(--line)}
-  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;margin-top:50px}
+  .about-grid{display:block;margin-top:50px}
+  .about-text{max-width:760px;margin:0 auto;text-align:center}
+  .about-text .portrait{margin:0 auto 30px}
   .about-grid p{margin-bottom:18px;font-size:21px}
   .about-grid p.big{font-size:30px;line-height:1.3;font-weight:500}
   .about-grid p.big em{color:var(--maroon)}
-  .themes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .themes{display:grid;grid-template-columns:repeat(3,1fr);max-width:760px;margin:0 auto;gap:1px;background:var(--line);border:1px solid var(--line)}
   .themes div{background:var(--paper);padding:26px 22px;font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.2em;font-size:13px;display:flex;gap:12px;align-items:center}
   .themes div::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex:none}
-  .transcend{grid-column:1/-1;text-align:center;margin-top:-30px;font-size:22px;font-style:italic;color:var(--muted)}
+  .about-grid p.transcend{text-align:center;margin:34px 0 0;font-size:22px;font-style:italic;color:var(--muted)}
 
   /* filters */
   .filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:40px 0 44px}
@@ -143,7 +145,8 @@
     .grid{grid-template-columns:1fr}
     .tatvas-hero .stats strong{font-size:30px}
     .tatvas-hero .stats span{font-size:9px;letter-spacing:.16em}
-    .intro-video{margin-top:44px;border-radius:16px}
+    .intro-video{margin:40px auto;border-radius:16px}
+    .themes{grid-template-columns:1fr 1fr}
     .play-lg{width:70px;height:70px;margin:-35px 0 0 -35px}
     .portrait{width:62%;margin-left:auto;margin-right:auto}
     nav ul{display:none}
@@ -173,11 +176,17 @@
     <h2>About Tatvamasi</h2>
     <p class="lede">Timeless words of the truly free, offered to humanity across the ages.</p>
     <div class="about-grid">
-      <div>
+      <div class="about-text">
         <div class="portrait"><img src="https://i.ytimg.com/vi/ShZCJX6vuAc/maxresdefault.jpg" alt="Smita singing Kulamu Lona Nokadu, Tatvam 21" loading="lazy"></div>
         <p class="big">Smita's most ambitious project: <em>100 ancient Tatvas</em>, written by liberated souls across the centuries.</p>
         <p>Tatvas are not religious texts. They are human truths. Written by evolved souls, they speak to the very core of existence.</p>
         <p>These are the words every generation needs to hear, now more than ever.</p>
+      </div>
+      <div class="intro-video" id="intro">
+        <button class="intro-card" id="intro-play" type="button" aria-label="Play: The Beginning of Tatvamasi">
+          <img src="https://i.ytimg.com/vi/cddv9aEgk8E/maxresdefault.jpg" alt="The Beginning of Tatvamasi" loading="lazy">
+          <span class="play-lg"></span>
+        </button>
       </div>
       <div class="themes">
         <div>Social Injustice</div>
@@ -188,12 +197,6 @@
         <div>Liberation</div>
       </div>
       <p class="transcend">They transcend religion, caste, time and geography.</p>
-    </div>
-    <div class="intro-video" id="intro">
-      <button class="intro-card" id="intro-play" type="button" aria-label="Play: The Beginning of Tatvamasi">
-        <img src="https://i.ytimg.com/vi/cddv9aEgk8E/maxresdefault.jpg" alt="The Beginning of Tatvamasi" loading="lazy">
-        <span class="play-lg"></span>
-      </button>
     </div>
   </div>
 </section>
