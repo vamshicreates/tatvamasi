@@ -33,6 +33,17 @@
   nav ul a{font-family:"Josefin Sans";font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
   nav ul a:hover{color:var(--maroon)}
 
+  /* tatvas hero (title art + stats + grid) */
+  .tatvas-hero{padding-top:36px;text-align:center}
+  .tatvas-hero .grid,.tatvas-hero .filters{text-align:left}
+  .title-art{width:min(860px,100%);height:auto;display:block;margin:0 auto;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
+  .tatvas-hero .stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:720px;margin:26px auto 0;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tatvas-hero .stats div{padding:22px 8px}
+  .tatvas-hero .stats div+div{border-left:1px solid var(--line)}
+  .tatvas-hero .cta{margin-top:26px}
+  /* portrait */
+  .portrait{width:min(300px,70%);aspect-ratio:1;border-radius:28px;overflow:hidden;position:relative;margin-bottom:30px;box-shadow:0 18px 40px -18px rgba(60,30,20,.45);outline:1px solid var(--line);background:#5a1d1d}
+  .portrait img{position:absolute;top:0;left:-136.17%;width:272.34%;height:auto;max-width:none}
   /* hero */
   .hero{text-align:center;padding:40px 0 70px}
   .hero img{width:min(920px,100%);height:auto;display:block;margin:0 auto;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
@@ -121,6 +132,9 @@
   }
   @media (max-width:620px){
     .grid{grid-template-columns:1fr}
+    .tatvas-hero .stats strong{font-size:30px}
+    .tatvas-hero .stats span{font-size:9px;letter-spacing:.16em}
+    .portrait{width:62%;margin-left:auto;margin-right:auto}
     nav ul{display:none}
     section{padding:64px 0}
     .stats{gap:30px}
@@ -131,30 +145,33 @@
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="brand">TATVAM<b>A</b>SI</a>
+    <a href="#tatvas" class="brand">TATVAM<b>A</b>SI</a>
     <ul>
-      <li><a href="#about">About</a></li>
       <li><a href="#tatvas">The Tatvas</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#smita">Smita</a></li>
       <li><a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="hero" id="top">
+
+<section id="tatvas" class="tatvas-hero">
   <div class="wrap">
-    <img src="assets/tatvamasi-title.png" alt="Old School presents Tatvamasi: Nāda to Nirvāna, by Smita. A deep dive into the ocean of ancient wisdom." width="926" height="506">
-    <div class="cta">
-      <a href="#tatvas" class="btn solid">Watch the Tatvas</a>
-      <a href="https://www.youtube.com/@SmitaSpiritual?sub_confirmation=1" target="_blank" rel="noopener" class="btn">Subscribe on YouTube</a>
-    </div>
+    <img class="title-art" src="assets/tatvamasi-title.png" alt="Old School presents Tatvamasi: Nāda to Nirvāna, by Smita. A deep dive into the ocean of ancient wisdom." width="926" height="506">
     <div class="stats">
       <div><strong>100</strong><span>Ancient Tatvas</span></div>
       <div><strong id="stat-released">27</strong><span>Released so far</span></div>
       <div><strong>38.4K</strong><span>Subscribers</span></div>
     </div>
+    <div class="cta"><a href="https://www.youtube.com/@SmitaSpiritual?sub_confirmation=1" target="_blank" rel="noopener" class="btn solid">Subscribe on YouTube</a></div>
+    <div class="divider" style="margin-top:64px"><i></i></div>
+    <h2>The Tatvas</h2>
+    <p class="lede">Every Tatva released so far. Tap any Tatva to watch.</p>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
   </div>
-</header>
+</section>
 
 <section id="about">
   <div class="wrap">
@@ -163,6 +180,7 @@
     <p class="lede">Timeless words of the truly free, offered to humanity across the ages.</p>
     <div class="about-grid">
       <div>
+        <div class="portrait"><img src="https://i.ytimg.com/vi/ShZCJX6vuAc/maxresdefault.jpg" alt="Smita singing Kulamu Lona Nokadu, Tatvam 21" loading="lazy"></div>
         <p class="big">Smita's most ambitious project: <em>100 ancient Tatvas</em>, written by liberated souls across the centuries.</p>
         <p>Tatvas are not religious texts. They are human truths. Written by evolved souls, they speak to the very core of existence.</p>
         <p>These are the words every generation needs to hear, now more than ever.</p>
@@ -180,15 +198,6 @@
   </div>
 </section>
 
-<section id="tatvas">
-  <div class="wrap">
-    <div class="divider"><i></i></div>
-    <h2>The Tatvas</h2>
-    <p class="lede">Every Tatva released so far. Tap any Tatva to watch.</p>
-    <div class="filters" id="filters"></div>
-    <div class="grid" id="grid"></div>
-  </div>
-</section>
 
 <section id="smita" style="background:var(--paper-2);border-top:1px solid var(--line)">
   <div class="wrap">
