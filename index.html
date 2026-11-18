@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tatvamasi · Nāda to Nirvāna · Smita</title>
+<meta name="description" content="Tatvamasi by Smita: 100 ancient Tatvas by liberated souls, sung for today. Watch every Tatva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f5ee; --paper-2:#efe9dc; --ink:#2b2420; --muted:#7a6e64;
+    --gold:#b8913a; --gold-2:#d9b86a; --maroon:#7a1f2b; --rose:#8a5a4a;
+    --line:rgba(122,90,74,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(1200px 600px at 85% -10%,rgba(0,0,0,.035),transparent 60%),
+               radial-gradient(900px 500px at -10% 30%,rgba(0,0,0,.03),transparent 60%)}
+  a{color:inherit}
+  .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 28px}
+  .caps{font-family:"Josefin Sans",sans-serif;text-transform:uppercase;letter-spacing:.28em;font-weight:300}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(247,245,238,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:"Josefin Sans";font-weight:300;letter-spacing:.42em;font-size:18px;text-decoration:none}
+  .brand b{color:var(--maroon);font-weight:400}
+  nav ul{display:flex;gap:30px;list-style:none}
+  nav ul a{font-family:"Josefin Sans";font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .2s}
+  nav ul a:hover{color:var(--maroon)}
+
+  /* hero */
+  .hero{text-align:center;padding:40px 0 70px}
+  .hero img{width:min(920px,100%);height:auto;display:block;margin:0 auto;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
+  .hero .cta{display:flex;gap:14px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+  .btn{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.22em;font-size:12.5px;padding:15px 26px;text-decoration:none;border:1px solid var(--ink);transition:all .25s;display:inline-block}
+  .btn.solid{background:var(--maroon);border-color:var(--maroon);color:#fff}
+  .btn.solid:hover{background:#5f1720}
+  .btn:not(.solid):hover{background:var(--ink);color:var(--paper)}
+  .stats{display:flex;justify-content:center;gap:56px;margin-top:46px;flex-wrap:wrap}
+  .stats div{text-align:center}
+  .stats strong{display:block;font-family:"Josefin Sans";font-weight:200;font-size:44px;letter-spacing:.06em;color:var(--maroon);line-height:1}
+  .stats span{font-family:"Josefin Sans";font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+
+  /* divider */
+  .divider{display:flex;align-items:center;gap:18px;justify-content:center;margin:0 auto 18px;color:var(--gold)}
+  .divider::before,.divider::after{content:"";height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .divider::after{transform:scaleX(-1)}
+  .divider i{width:7px;height:7px;background:var(--maroon);transform:rotate(45deg);display:block}
+
+  section{padding:90px 0;position:relative;z-index:1}
+  h2{font-family:"Josefin Sans";font-weight:300;text-transform:uppercase;letter-spacing:.32em;font-size:clamp(26px,3.4vw,38px);text-align:center;margin-bottom:14px}
+  .lede{text-align:center;max-width:720px;margin:0 auto;color:var(--muted);font-size:21px;font-style:italic}
+
+  /* about */
+  #about{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center;margin-top:50px}
+  .about-grid p{margin-bottom:18px;font-size:21px}
+  .about-grid p.big{font-size:30px;line-height:1.3;font-weight:500}
+  .about-grid p.big em{color:var(--maroon)}
+  .themes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .themes div{background:var(--paper);padding:26px 22px;font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.2em;font-size:13px;display:flex;gap:12px;align-items:center}
+  .themes div::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex:none}
+  .transcend{grid-column:1/-1;text-align:center;margin-top:-30px;font-size:22px;font-style:italic;color:var(--muted)}
+
+  /* filters */
+  .filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:40px 0 44px}
+  .filters button{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.2em;font-size:12px;padding:11px 18px;background:transparent;border:1px solid var(--line);color:var(--muted);cursor:pointer;transition:all .2s}
+  .filters button:hover{border-color:var(--rose);color:var(--ink)}
+  .filters button.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .filters button sup{font-size:9px;margin-left:4px;opacity:.7}
+
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px}
+  .card{cursor:pointer;text-align:left;background:none;border:0;font:inherit;color:inherit;display:block;width:100%}
+  .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e7e0d1;outline:1px solid var(--line)}
+  .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .4s}
+  .card:hover .thumb img{transform:scale(1.05);filter:brightness(.82)}
+  .play{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .3s}
+  .play span{width:62px;height:62px;border-radius:50%;background:rgba(247,245,238,.92);display:grid;place-items:center}
+  .play span::after{content:"";border-left:16px solid var(--maroon);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+  .card:hover .play{opacity:1}
+  .dur{position:absolute;right:8px;bottom:8px;background:rgba(43,36,32,.85);color:#fff;font-family:"Josefin Sans";font-size:11px;letter-spacing:.08em;padding:3px 7px}
+  .num{position:absolute;left:0;top:0;background:var(--maroon);color:#fff;font-family:"Josefin Sans";font-size:11px;letter-spacing:.2em;padding:6px 10px;text-transform:uppercase}
+  .meta{padding-top:14px}
+  .meta .type{font-family:"Josefin Sans";font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .meta h3{font-size:25px;font-weight:600;line-height:1.2;margin:4px 0 4px}
+  .meta .sub{font-size:16px;color:var(--muted)}
+
+  /* smita */
+  #smita .wrap{max-width:820px;text-align:center}
+  #smita p{font-size:22px;margin-top:22px}
+  .sig{font-family:"Cormorant Garamond";font-style:italic;font-size:34px;color:var(--maroon);margin-top:26px}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:46px 0 40px;text-align:center;position:relative;z-index:1}
+  footer .links{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+  footer .links a{font-family:"Josefin Sans";font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+  footer .links a:hover{color:var(--maroon)}
+  footer small{font-size:15px;color:var(--muted)}
+  footer small a{color:var(--maroon)}
+
+  /* modal */
+  .modal{position:fixed;inset:0;z-index:50;background:rgba(30,24,20,.86);display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.open{display:flex}
+  .modal .box{width:min(1100px,100%)}
+  .modal .frame{aspect-ratio:16/9;background:#000}
+  .modal iframe{width:100%;height:100%;border:0;display:block}
+  .modal .bar{display:flex;justify-content:space-between;align-items:center;color:var(--paper);padding:14px 2px;gap:16px}
+  .modal .bar h4{font-weight:500;font-size:22px}
+  .modal .bar a,.modal .bar button{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.2em;font-size:11.5px;color:var(--paper);background:none;border:1px solid rgba(247,245,238,.4);padding:10px 14px;cursor:pointer;text-decoration:none;white-space:nowrap}
+
+  @media (max-width:960px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    nav ul{gap:18px}
+  }
+  @media (max-width:620px){
+    .grid{grid-template-columns:1fr}
+    nav ul{display:none}
+    section{padding:64px 0}
+    .stats{gap:30px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand">TATVAM<b>A</b>SI</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#tatvas">The Tatvas</a></li>
+      <li><a href="#smita">Smita</a></li>
+      <li><a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img src="assets/tatvamasi-title.png" alt="Old School presents Tatvamasi: Nāda to Nirvāna, by Smita. A deep dive into the ocean of ancient wisdom." width="926" height="506">
+    <div class="cta">
+      <a href="#tatvas" class="btn solid">Watch the Tatvas</a>
+      <a href="https://www.youtube.com/@SmitaSpiritual?sub_confirmation=1" target="_blank" rel="noopener" class="btn">Subscribe on YouTube</a>
+    </div>
+    <div class="stats">
+      <div><strong>100</strong><span>Ancient Tatvas</span></div>
+      <div><strong id="stat-released">27</strong><span>Released so far</span></div>
+      <div><strong>38.4K</strong><span>Subscribers</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="divider"><i></i></div>
+    <h2>About Tatvamasi</h2>
+    <p class="lede">Timeless words of the truly free, offered to humanity across the ages.</p>
+    <div class="about-grid">
+      <div>
+        <p class="big">Smita's most ambitious project: <em>100 ancient Tatvas</em>, written by liberated souls across the centuries.</p>
+        <p>Tatvas are not religious texts. They are human truths. Written by evolved souls, they speak to the very core of existence.</p>
+        <p>These are the words every generation needs to hear, now more than ever.</p>
+      </div>
+      <div class="themes">
+        <div>Social Injustice</div>
+        <div>Equality</div>
+        <div>Philosophy</div>
+        <div>Bhakti</div>
+        <div>Truth</div>
+        <div>Liberation</div>
+      </div>
+      <p class="transcend">They transcend religion, caste, time and geography.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tatvas">
+  <div class="wrap">
+    <div class="divider"><i></i></div>
+    <h2>The Tatvas</h2>
+    <p class="lede">Every video from the channel. Tap any Tatva to watch.</p>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="smita" style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="divider"><i></i></div>
+    <h2>Smita</h2>
+    <p>Singer, performer and one of the defining voices of Indian pop, Smita now turns to the oldest songs we have. With Tatvamasi she brings the words of saints and seers to a new generation, one Tatva at a time.</p>
+    <div class="sig">Smita</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube · @SmitaSpiritual</a>
+      <a href="#tatvas">The Tatvas</a>
+      <a href="#about">About</a>
+    </div>
+    <small>© <span id="yr"></span> Smita · Tatvamasi, presented by Old School. Built by <a href="https://vamshicreates.tech" target="_blank" rel="noopener">Vamshi Creates</a></small>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="box">
+    <div class="bar"><h4 id="m-title"></h4><div style="display:flex;gap:8px"><a id="m-yt" target="_blank" rel="noopener">Open on YouTube</a><button id="m-close" aria-label="Close">Close ✕</button></div></div>
+    <div class="frame"><iframe id="m-frame" title="Tatva video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+  </div>
+</div>
+
+<script src="videos.js"></script>
+<script>
+(function(){
+  const V = window.VIDEOS.map(v => ({id:v[0], title:v[1], type:v[2], ch:v[3], no:v[4], ft:v[5], dur:v[6], views:v[7]}));
+  const released = V.filter(v => v.ch && v.no).length;
+  document.getElementById('stat-released').textContent = released;
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const groups = [
+    {key:'all', label:'All', test:() => true},
+    {key:'c1', label:'Chapter 1', test:v => v.ch === 1},
+    {key:'c2', label:'Chapter 2', test:v => v.ch === 2},
+    {key:'albums', label:'Earlier Albums', test:v => v.ch === 0}
+  ];
+  const filters = document.getElementById('filters');
+  const grid = document.getElementById('grid');
+  let current = 'all';
+
+  groups.forEach(g => {
+    const b = document.createElement('button');
+    b.innerHTML = g.label + '<sup>' + V.filter(g.test).length + '</sup>';
+    b.onclick = () => { current = g.key; render(); };
+    b.dataset.key = g.key;
+    filters.appendChild(b);
+  });
+
+  function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+  function render(){
+    [...filters.children].forEach(b => b.classList.toggle('on', b.dataset.key === current));
+    const g = groups.find(x => x.key === current);
+    grid.innerHTML = V.filter(g.test).map(v => {
+      const tag = v.ch ? (v.no ? 'Tatvam ' + v.no : 'Intro') : 'Album';
+      const sub = [v.ch ? 'Chapter ' + v.ch : '', v.ft ? 'Ft. ' + v.ft : '', v.views + ' views'].filter(Boolean).join(' · ');
+      return `<button class="card" data-id="${v.id}" data-title="${esc(v.title)}">
+        <div class="thumb">
+          <img loading="lazy" src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${esc(v.title)}">
+          <span class="num">${tag}</span><span class="dur">${v.dur}</span>
+          <div class="play"><span></span></div>
+        </div>
+        <div class="meta"><div class="type">${esc(v.type)}</div><h3>${esc(v.title)}</h3><div class="sub">${esc(sub)}</div></div>
+      </button>`;
+    }).join('');
+  }
+  render();
+
+  const modal = document.getElementById('modal'), frame = document.getElementById('m-frame');
+  grid.addEventListener('click', e => {
+    const c = e.target.closest('.card'); if(!c) return;
+    document.getElementById('m-title').textContent = c.dataset.title;
+    document.getElementById('m-yt').href = 'https://www.youtube.com/watch?v=' + c.dataset.id;
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + c.dataset.id + '?autoplay=1&rel=0';
+    modal.classList.add('open'); document.body.style.overflow = 'hidden';
+  });
+  function close(){ modal.classList.remove('open'); frame.src = ''; document.body.style.overflow = ''; }
+  document.getElementById('m-close').onclick = close;
+  modal.addEventListener('click', e => { if(e.target === modal) close(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>
