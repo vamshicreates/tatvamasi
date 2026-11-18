@@ -27,6 +27,5 @@ window.VIDEOS = [
   ["i3zFV32ugG8", "Vastha Vattidhe", "Advaita Vedanta Tatvam", 1, 4, "Smita, Kalyan Vasanth", "3:35", "259K"],
   ["fQK2JWQfPJA", "Bhaja Govindam", "Advaitha Atma Tatvam", 1, 3, "Smita, Datta Sai & Sai", "3:45", "163K"],
   ["ICGK9qK4HEY", "Nimishamainanu", "Moral Wisdom Tatvam", 1, 2, "", "2:50", "115K"],
-  ["-KNaOzP8nbs", "Manasa Sancharare", "Advaitha Bhakti Tatvam", 1, 1, "", "3:10", "244K"],
-  ["cddv9aEgk8E", "The Beginning of Tatvamasi", "Introduction", 1, 0, "", "3:53", "122K"]
+  ["-KNaOzP8nbs", "Manasa Sancharare", "Advaitha Bhakti Tatvam", 1, 1, "", "3:10", "244K"]
 ];
