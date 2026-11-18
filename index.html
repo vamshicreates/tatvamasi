@@ -35,6 +35,7 @@
 
   /* tatvas hero (title art + stats + grid) */
   .tatvas-hero{padding-top:36px;text-align:center}
+  .closing{margin-top:90px;padding-top:50px;border-top:1px solid var(--line)}
   .tatvas-hero .grid,.tatvas-hero .filters{text-align:left}
   .title-art{width:min(860px,100%);height:auto;display:block;margin:0 auto;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
   .tatvas-hero .stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:720px;margin:26px auto 0;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -183,18 +184,20 @@
 
 <section id="tatvas" class="tatvas-hero">
   <div class="wrap">
-    <img class="title-art" src="assets/tatvamasi-title.png" alt="Old School presents Tatvamasi: Nāda to Nirvāna, by Smita. A deep dive into the ocean of ancient wisdom." width="926" height="506">
+    <div class="divider"><i></i></div>
+    <h2>The Tatvas</h2>
+    <p class="lede">Every Tatva released so far. Tap any Tatva to watch.</p>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+    <div class="closing" id="channel">
+      <img class="title-art" src="assets/tatvamasi-title.png" alt="Old School presents Tatvamasi: Nāda to Nirvāna, by Smita. A deep dive into the ocean of ancient wisdom." width="926" height="506">
     <div class="stats">
       <div><strong>100</strong><span>Ancient Tatvas</span></div>
       <div><strong id="stat-released">27</strong><span>Released so far</span></div>
       <div><strong>38.4K</strong><span>Subscribers</span></div>
     </div>
     <div class="cta"><a href="https://www.youtube.com/@SmitaSpiritual?sub_confirmation=1" target="_blank" rel="noopener" class="btn solid">Subscribe on YouTube</a></div>
-    <div class="divider" style="margin-top:64px"><i></i></div>
-    <h2>The Tatvas</h2>
-    <p class="lede">Every Tatva released so far. Tap any Tatva to watch.</p>
-    <div class="filters" id="filters"></div>
-    <div class="grid" id="grid"></div>
+    </div>
   </div>
 </section>
 
