@@ -1,5 +1,5 @@
-// All videos from youtube.com/@SmitaSpiritual (34 videos, newest first).
-// [videoId, title, tatvam type, chapter (0 = not Tatvamasi), tatvam no., featuring, duration, views]
+// All videos from youtube.com/@SmitaSpiritual Tatvamasi videos only, newest first.
+// [videoId, title, tatvam type, chapter, tatvam no., featuring, duration, views]
 window.VIDEOS = [
   ["b5kiobFj1Ds", "Ninnu Vidisi Undalenayya", "Sharanagathi Tatvam", 2, 27, "Smita", "4:15", "238K"],
   ["L9bfscez40s", "Telisite Mokshamu", "Gnana Vairagya Tatvam", 2, 26, "Smita", "3:27", "123K"],
@@ -28,11 +28,5 @@ window.VIDEOS = [
   ["fQK2JWQfPJA", "Bhaja Govindam", "Advaitha Atma Tatvam", 1, 3, "Smita, Datta Sai & Sai", "3:45", "163K"],
   ["ICGK9qK4HEY", "Nimishamainanu", "Moral Wisdom Tatvam", 1, 2, "", "2:50", "115K"],
   ["-KNaOzP8nbs", "Manasa Sancharare", "Advaitha Bhakti Tatvam", 1, 1, "", "3:10", "244K"],
-  ["cddv9aEgk8E", "The Beginning of Tatvamasi", "Introduction", 1, 0, "", "3:53", "122K"],
-  ["CrlrI2imlHM", "Amba Shambhavi", "From the album Ishana", 0, 0, "", "3:23", "373K"],
-  ["kf9I7dr5NlQ", "Yogeshwaraya", "From the album Ishana", 0, 0, "", "4:02", "382K"],
-  ["VNjJm0S83Qg", "Mahi Ve (Remix)", "From the album Smita", 0, 0, "", "3:45", "114K"],
-  ["wITTHCtVW08", "Hairabba", "Smita Pop", 0, 0, "", "4:40", "443K"],
-  ["hW_VTigasLo", "Sannajaji Padaka (Club Mix)", "Smita Pop", 0, 0, "", "4:20", "3.6M"],
-  ["Kq4C1ShHKSY", "Koyilamma", "Smita Pop", 0, 0, "", "4:03", "1.1M"]
+  ["cddv9aEgk8E", "The Beginning of Tatvamasi", "Introduction", 1, 0, "", "3:53", "122K"]
 ];

@@ -184,7 +184,7 @@
   <div class="wrap">
     <div class="divider"><i></i></div>
     <h2>The Tatvas</h2>
-    <p class="lede">Every video from the channel. Tap any Tatva to watch.</p>
+    <p class="lede">Every Tatva released so far. Tap any Tatva to watch.</p>
     <div class="filters" id="filters"></div>
     <div class="grid" id="grid"></div>
   </div>
@@ -228,8 +228,7 @@
   const groups = [
     {key:'all', label:'All', test:() => true},
     {key:'c1', label:'Chapter 1', test:v => v.ch === 1},
-    {key:'c2', label:'Chapter 2', test:v => v.ch === 2},
-    {key:'albums', label:'Earlier Albums', test:v => v.ch === 0}
+    {key:'c2', label:'Chapter 2', test:v => v.ch === 2}
   ];
   const filters = document.getElementById('filters');
   const grid = document.getElementById('grid');
@@ -249,7 +248,7 @@
     [...filters.children].forEach(b => b.classList.toggle('on', b.dataset.key === current));
     const g = groups.find(x => x.key === current);
     grid.innerHTML = V.filter(g.test).map(v => {
-      const tag = v.ch ? (v.no ? 'Tatvam ' + v.no : 'Intro') : 'Album';
+      const tag = v.no ? 'Tatvam ' + v.no : 'Intro';
       const sub = [v.ch ? 'Chapter ' + v.ch : '', v.ft ? 'Ft. ' + v.ft : '', v.views + ' views'].filter(Boolean).join(' · ');
       return `<button class="card" data-id="${v.id}" data-title="${esc(v.title)}">
         <div class="thumb">
