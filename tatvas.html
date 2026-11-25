@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore the Tatvas · Tatvamasi · Smita</title>
+<meta name="description" content="Explore the Tatvas of Tatvamasi by Smita: devotion, wisdom, letting go and life together, with the songs for each Tatva.">
+<meta name="theme-color" content="#4E171D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --choc:#4E171D; --choc-deep:#3A0F14; --velvet:#7D0103; --berry:#810220; --espresso:#5C1F02; --terracotta:#9E4C3E;
+    --cream:#F5D4AB; --ivory:#FDF5E2; --vanilla:#FEFAEF; --gold:#B8903F; --gold-lt:#E4C082; --sand:#AB9073;
+    --paper:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .18  0 0 0 0 .1  0 0 0 .08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:150px}
+  body{background:var(--ivory) var(--paper);color:var(--choc);font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%}
+  a{color:inherit}
+  .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 28px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:30;background:rgba(254,250,239,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--gold)}
+  nav::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--velvet);opacity:.55}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand img{height:28px;width:auto;display:block}
+  nav ul{display:flex;gap:34px;list-style:none}
+  nav ul a{font-family:"Josefin Sans";font-size:12px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--choc);padding:6px 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+  nav ul a:hover,nav ul a.on{color:var(--velvet);border-color:var(--gold)}
+
+  /* ornaments */
+  .orn{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 auto 18px}
+  .orn::before,.orn::after{content:"";height:1px;width:clamp(50px,12vw,130px);background:linear-gradient(90deg,transparent,var(--gold))}
+  .orn::after{transform:scaleX(-1)}
+  .orn img{width:54px;height:auto;display:block}
+  h1,h2{font-family:"Cormorant Garamond";font-weight:600;text-transform:uppercase;letter-spacing:.3em;text-align:center;line-height:1.2;color:var(--velvet);padding-left:.3em}
+  h1{font-size:clamp(32px,4.6vw,56px);margin-bottom:18px}
+  h2{font-size:clamp(26px,3.2vw,38px)}
+  section{position:relative;overflow:hidden}
+
+  /* hero */
+  .hero{padding:84px 0 70px}
+  .corner{position:absolute;pointer-events:none;width:clamp(150px,24vw,340px);height:auto;z-index:0}
+  .corner.br{right:-10px;bottom:-10px}
+  .corner.tl{left:-10px;top:-10px;transform:rotate(180deg)}
+  .hero .intro{max-width:720px;margin:0 auto;text-align:center;font-size:clamp(23px,2.6vw,28px);line-height:1.4;font-style:italic;color:var(--espresso)}
+  .hero .intro::before{content:"";display:block;width:90px;height:1px;background:var(--gold);margin:0 auto 26px}
+
+  /* frieze plate */
+  .plate{position:relative;padding:54px 0 48px;background:var(--vanilla) var(--paper);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+  .plate::before,.plate::after{content:"";position:absolute;left:0;right:0;height:5px;border-top:3px solid var(--velvet);border-bottom:1px solid var(--velvet)}
+  .plate::before{top:9px}.plate::after{bottom:9px}
+  .plate img{display:block;width:min(1000px,100%);height:auto;margin:0 auto}
+
+  /* filter bar */
+  .filters{position:sticky;top:66px;z-index:20;background:rgba(253,245,226,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,144,63,.55)}
+  .filters .wrap{display:flex;justify-content:center;gap:12px;padding-top:12px;padding-bottom:12px;overflow-x:auto;scrollbar-width:none}
+  .filters .wrap::-webkit-scrollbar{display:none}
+  .chip{appearance:none;flex:none;display:flex;align-items:center;gap:10px;cursor:pointer;font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.18em;font-size:11.5px;color:var(--velvet);background:rgba(254,250,239,.8);border:1px solid var(--gold);padding:8px 16px 8px 10px;box-shadow:inset 0 0 0 3px var(--vanilla),inset 0 0 0 4px rgba(184,144,63,.45);transition:background .25s,color .25s}
+  .chip img{width:30px;height:30px}
+  .chip.all{padding-left:16px}
+  .chip:hover{background:rgba(245,212,171,.55)}
+  .chip.on{background:var(--velvet);color:var(--gold-lt);box-shadow:inset 0 0 0 3px var(--velvet),inset 0 0 0 4px var(--gold-lt)}
+
+  /* theme sections */
+  .theme{padding:84px 0 70px}
+  .theme:nth-of-type(even){background:var(--vanilla) var(--paper);border-top:1px solid rgba(184,144,63,.5);border-bottom:1px solid rgba(184,144,63,.5)}
+  .theme[hidden]{display:none}
+  .theme-head{text-align:center;margin-bottom:46px}
+  .medal{width:116px;height:116px;display:block;margin:0 auto 18px;border-radius:50%;box-shadow:0 0 0 5px var(--ivory),0 0 0 6.5px var(--gold),0 14px 26px -12px rgba(78,23,29,.55)}
+  .theme:nth-of-type(even) .medal{box-shadow:0 0 0 5px var(--vanilla),0 0 0 6.5px var(--gold),0 14px 26px -12px rgba(78,23,29,.55)}
+  .count{font-family:"Josefin Sans";font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--sand);margin-top:12px}
+
+  .entries{display:grid;grid-template-columns:repeat(2,1fr);gap:34px}
+  .entry{position:relative;background:var(--vanilla);border:1px solid var(--gold);padding:34px 34px 30px;box-shadow:inset 0 0 0 6px var(--vanilla),inset 0 0 0 7px rgba(184,144,63,.5),0 22px 40px -28px rgba(78,23,29,.45);display:flex;flex-direction:column}
+  .theme:nth-of-type(even) .entry{background:var(--ivory);box-shadow:inset 0 0 0 6px var(--ivory),inset 0 0 0 7px rgba(184,144,63,.5),0 22px 40px -28px rgba(78,23,29,.45)}
+  .entry.wide{grid-column:1/-1}
+  .entry.wide p{max-width:760px}
+  @media (min-width:1001px){.entry.wide .song-grid{grid-template-columns:repeat(5,1fr)}}
+  .entry.solo{grid-column:1/-1;max-width:calc(50% - 17px);justify-self:center}
+  .entry .no{font-family:"Josefin Sans";font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+  .entry h3{font-size:clamp(23px,2.2vw,28px);font-weight:600;text-transform:uppercase;letter-spacing:.12em;line-height:1.2;color:var(--velvet);margin:8px 0 4px}
+  .entry .sub{font-style:italic;font-size:22px;color:var(--terracotta);margin-bottom:12px}
+  .entry p{font-size:20.5px;color:var(--choc);margin-bottom:22px}
+  .songs{margin-top:auto;border-top:1px solid rgba(184,144,63,.6);padding-top:20px}
+  .songs .lbl{font-family:"Josefin Sans";font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--sand);margin-bottom:14px}
+  .song-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px 14px}
+  .song{align-self:start;appearance:none;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;display:block}
+  .song .th{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#2a0b0e;box-shadow:0 0 0 1px var(--gold),0 0 0 4px var(--vanilla),0 0 0 5px rgba(184,144,63,.45);transition:transform .3s,box-shadow .3s}
+  .theme:nth-of-type(even) .song .th{box-shadow:0 0 0 1px var(--gold),0 0 0 4px var(--ivory),0 0 0 5px rgba(184,144,63,.45)}
+  .song .th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .3s}
+  .song:hover .th{transform:translateY(-3px)}
+  .song:hover .th img{transform:scale(1.06);filter:brightness(.75)}
+  .song .th i{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .25s}
+  .song .th i::after{content:"";width:38px;height:38px;border-radius:50%;background:rgba(254,250,239,.94) ;box-shadow:0 0 0 3px rgba(228,192,130,.55)}
+  .song .th i::before{content:"";position:absolute;border-left:11px solid var(--velvet);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px;z-index:1}
+  .song:hover .th i{opacity:1}
+  .song .nm{display:block;margin-top:10px;font-size:18px;font-weight:600;line-height:1.2;color:var(--choc)}
+  .song .mt{display:block;font-family:"Josefin Sans";font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-top:3px}
+
+  /* closing band */
+  .band{background:var(--choc) var(--paper);background-image:var(--paper),radial-gradient(900px 400px at 50% 0,rgba(125,1,3,.45),transparent 70%),linear-gradient(var(--choc),var(--choc-deep));color:var(--ivory);text-align:center;padding:90px 0 96px}
+  .band .bells{display:block;width:min(560px,86%);height:auto;margin:0 auto 18px}
+  .band h2{color:var(--gold-lt);margin-bottom:14px}
+  .band p{max-width:620px;margin:0 auto;font-style:italic;font-size:23px;color:var(--cream)}
+  .btns{display:flex;flex-wrap:wrap;gap:22px;justify-content:center;margin-top:34px}
+  .btn{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.22em;font-size:12.5px;padding:17px 30px;text-decoration:none;display:inline-block;background:var(--velvet);color:var(--ivory);box-shadow:0 0 0 1px var(--velvet),0 0 0 4px var(--choc),0 0 0 5px var(--gold-lt);transition:background .25s,transform .25s}
+  .btn:hover{background:var(--berry);transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:var(--gold-lt);box-shadow:0 0 0 1px var(--gold-lt)}
+  .btn.ghost:hover{background:var(--gold-lt);color:var(--choc)}
+
+  /* footer */
+  footer{background:var(--choc-deep) var(--paper);color:var(--cream);text-align:center;padding:56px 0 46px;border-top:3px solid var(--gold)}
+  footer .fl{display:block;width:min(300px,60%);height:auto;margin:0 auto 22px}
+  footer .links{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+  footer .links a{font-family:"Josefin Sans";font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--gold-lt)}
+  footer .links a:hover{color:var(--ivory)}
+  footer small{font-size:16px;opacity:.85}
+  footer small a{color:var(--gold-lt)}
+
+  /* modal */
+  .modal{position:fixed;inset:0;z-index:60;background:rgba(30,8,10,.92);display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.open{display:flex}
+  .modal .box{width:min(1100px,100%)}
+  .modal .frame{aspect-ratio:16/9;background:#000;box-shadow:0 0 0 1px var(--gold-lt),0 0 0 7px var(--choc),0 0 0 8px rgba(228,192,130,.5)}
+  .modal iframe{width:100%;height:100%;border:0;display:block}
+  .modal .bar{display:flex;justify-content:space-between;align-items:center;color:var(--ivory);padding:16px 2px;gap:16px}
+  .modal .bar h4{font-weight:600;font-size:24px}
+  .modal .bar a,.modal .bar button{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.2em;font-size:11.5px;color:var(--gold-lt);background:none;border:1px solid rgba(228,192,130,.6);padding:10px 14px;cursor:pointer;text-decoration:none;white-space:nowrap}
+
+  @media (max-width:1000px){
+    .entries{grid-template-columns:1fr}
+    .entry.solo{max-width:none}
+    nav ul{gap:20px}
+    .filters .wrap{justify-content:flex-start}
+  }
+  @media (max-width:620px){
+    body{font-size:19px}
+    .wrap{padding:0 20px}
+    nav ul li:not(.keep){display:none}
+    nav ul a{letter-spacing:.18em}
+    .hero{padding:64px 0 54px}
+    .theme{padding:64px 0 52px}
+    .entry{padding:28px 22px 24px}
+    .medal{width:96px;height:96px}
+    .song-grid{grid-template-columns:repeat(2,1fr)}
+    html{scroll-padding-top:140px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Tatvamasi home"><img src="assets/tatvamasi-wordmark.png" alt="Tatvamasi" width="203" height="28"></a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#tatvas">The Tatvas</a></li>
+      <li class="keep"><a href="tatvas.html" class="on">Explore</a></li>
+      <li><a href="index.html#smita">Smita</a></li>
+      <li><a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <img class="corner tl" src="assets/art/lotus-gold.webp" alt="" width="700" height="723" aria-hidden="true">
+  <img class="corner br" src="assets/art/lotus-gold.webp" alt="" width="700" height="723" aria-hidden="true">
+  <div class="wrap">
+    <div class="orn"><img src="assets/art/lotus-maroon.webp" alt="" width="300" height="158"></div>
+    <h1>Explore the Tatvas</h1>
+    <p class="intro">What stays with us as life changes? How do we find the strength to let go? What does it mean to see another person as our equal? Explore these questions through the songs of Tatvamasi by Smita.</p>
+  </div>
+</section>
+
+<div class="plate">
+  <div class="wrap"><img src="assets/art/rama-frieze.webp" alt="" width="1574" height="513" loading="lazy" aria-hidden="true"></div>
+</div>
+
+<div class="filters" id="filters">
+  <div class="wrap" role="tablist" aria-label="Browse by theme">
+    <button class="chip all on" data-f="all" role="tab">All Tatvas</button>
+    <button class="chip" data-f="devotion" role="tab"><img src="assets/art/medal-devotion.webp" alt="" width="60" height="60">Devotion &amp; Surrender</button>
+    <button class="chip" data-f="wisdom" role="tab"><img src="assets/art/medal-wisdom.webp" alt="" width="60" height="60">Wisdom &amp; the Self</button>
+    <button class="chip" data-f="liberation" role="tab"><img src="assets/art/medal-liberation.webp" alt="" width="60" height="60">Letting Go &amp; Liberation</button>
+    <button class="chip" data-f="together" role="tab"><img src="assets/art/medal-together.webp" alt="" width="60" height="60">Life Together</button>
+  </div>
+</div>
+
+<main id="themes"></main>
+
+<section class="band">
+  <div class="wrap">
+    <img class="bells" src="assets/art/bells.webp" alt="" width="1100" height="340" loading="lazy" aria-hidden="true">
+    <h2>Begin Listening</h2>
+    <p>Choose a Tatva that speaks to where you are today, and let the song do the rest.</p>
+    <div class="btns">
+      <a class="btn" href="index.html#tatvas">Watch every Tatva</a>
+      <a class="btn ghost" href="https://www.youtube.com/@SmitaSpiritual?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="fl" src="assets/art/flourish-gold.webp" alt="" width="1000" height="305" loading="lazy" aria-hidden="true">
+    <div class="links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#tatvas">The Tatvas</a>
+      <a href="tatvas.html">Explore</a>
+      <a href="index.html#smita">Smita</a>
+      <a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube · @SmitaSpiritual</a>
+    </div>
+    <small>© <span id="yr"></span> Smita · Tatvamasi, presented by Old School. Built by <a href="https://swipeupproductions.com/" target="_blank" rel="noopener">Swipeup Productions</a></small>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="box">
+    <div class="bar"><h4 id="m-title"></h4><div style="display:flex;gap:8px"><a id="m-yt" target="_blank" rel="noopener">Open on YouTube</a><button id="m-close" aria-label="Close">Close ✕</button></div></div>
+    <div class="frame"><iframe id="m-frame" title="Tatva video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+  </div>
+</div>
+
+<script src="videos.js"></script>
+<script>
+(function(){
+  /* Content from the Tatvamasi website brief */
+  const THEMES = [
+    {key:'devotion', title:'Devotion & Surrender', medal:'medal-devotion', tatvas:[
+      {id:'advaitha-bhakti', name:'Advaitha Bhakti Tatvam', sub:'Finding the Divine within', text:'We may begin by singing to a beloved form of the Divine. As that love deepens, we begin to recognise the same presence within ourselves.'},
+      {id:'sharanagathi', name:'Sharanagathi Tatvam', sub:'Taking refuge', text:'Sometimes the most honest prayer is simply, “Stay with me.” Sharanagathi gives voice to the trust with which we place our fears and hopes in the care of the Divine.'},
+      {id:'vedanta-bhakti', name:'Vedanta Bhakti Tatvam', sub:'Wisdom through prayer', text:'A prayer can hold a question as well as a wish. Through devotion, these songs invite us to ask what truly nourishes us and what is worth seeking in life.'}
+    ]},
+    {key:'wisdom', title:'Wisdom & the Self', medal:'medal-wisdom', tatvas:[
+      {id:'vedanta', name:'Vedanta Tatvam', sub:'The enduring questions', text:'What is the Self? What endures in a changing world? These compositions invite us into the questions at the heart of Vedanta and give us space to reflect on them.'},
+      {id:'advaita-vedanta', name:'Advaita Vedanta Tatvam', sub:'The wisdom of oneness', text:'The world appears to us in countless forms. Advaita asks us to contemplate one reality underlying them all, including the person asking the question.'},
+      {id:'advaitha-atma', name:'Advaitha Atma Tatvam', sub:'The Self beyond the body', text:'The body ages, our roles change, and familiar things pass away. These songs ask us to look more closely at the Self that endures through change and its oneness with the whole of life.'},
+      {id:'aatma-gnana', name:'Aatma Gnana Tatvam', sub:'Knowing oneself', text:'Who am I beneath my name, my work and the roles I play? Aatma Gnana begins with the intimate act of turning that question towards oneself.'},
+      {id:'gnana', name:'Gnana Tatvam', sub:'Seeing with discernment', text:'A familiar verse can take on a different meaning after we have lived through loss, joy or uncertainty. Gnana explores the understanding that lets us see an experience more clearly.'}
+    ]},
+    {key:'liberation', title:'Letting Go & Liberation', medal:'medal-liberation', tatvas:[
+      {id:'vairagya', name:'Vairagya Tatvam', sub:'The art of letting go', text:'We can love someone deeply and still accept that life will change. Vairagya explores how to care for what is here today while loosening our hold on how it must be tomorrow.'},
+      {id:'moksha', name:'Moksha Tatvam', sub:'Spiritual freedom', text:'What keeps us bound, and what allows us to be free? These songs contemplate liberation and the deep shift in understanding that the word Moksha holds.'}
+    ]},
+    {key:'together', title:'Life Together', medal:'medal-together', tatvas:[
+      {id:'moral-wisdom', name:'Moral Wisdom Tatvam', sub:'Wisdom in daily choices', text:'An honest word, a promise kept, the choice to admit a mistake. These songs bring wisdom into the ordinary moments in which our character takes shape.'},
+      {id:'samajika', name:'Samajika Tatvam', sub:'A reflection on society', text:'How much do a family name, a custom or a community’s approval shape the way we see someone? These songs turn a thoughtful eye towards the social world we inherit and help create.'},
+      {id:'social', name:'Social Equality and Justice', sub:'The dignity of every person', text:'Whose voice do we listen to, and whom do we overlook? These songs question divisions of caste and status and call us to honour each person’s dignity in how we treat them.'},
+      {id:'desa-bhakti', name:'Desa Bhakti Tatvam', sub:'Love of country and its people', text:'A country comes alive through its people. Desa Bhakti finds an expression of love for one’s homeland in caring for neighbours, sharing responsibility and contributing to the common good.'},
+      {id:'vishwa-shanti', name:'Vishwa Shanti Tatvam', sub:'A prayer for peace', text:'What would it mean to greet a stranger with the goodwill we offer a friend? These songs carry that wish beyond our own homes and communities into a prayer for peace across the world.'}
+    ]}
+  ];
+
+  /* which channel video "type" belongs to which Tatva above */
+  function tatvaOf(type){
+    const t = type.replace(/ Tatvam/g,'').trim();
+    if (/^Sama\b/.test(t)) return 'social';
+    return ({
+      'Advaitha Bhakti':'advaitha-bhakti','Advaita Bhakti':'advaitha-bhakti','Sharanagathi':'sharanagathi',
+      'Vedanta Bhakti':'vedanta-bhakti','Advaita Vedanta Bhakti':'vedanta-bhakti',
+      'Vedanta':'vedanta','Advaita Vedanta':'advaita-vedanta','Advaitha Atma':'advaitha-atma',
+      'Aatma Gnana':'aatma-gnana','Gnana':'gnana','Vairagya':'vairagya','Gnana Vairagya':'vairagya','Moksha':'moksha',
+      'Moral Wisdom':'moral-wisdom','Samajika':'samajika','Desa Bhakti':'desa-bhakti','Vishwa Shanti':'vishwa-shanti'
+    })[t];
+  }
+
+  const V = window.VIDEOS.map(v => ({id:v[0], title:v[1], type:v[2], ch:v[3], no:v[4], dur:v[6], views:v[7]}));
+  const byTatva = {};
+  V.forEach(v => { const k = tatvaOf(v.type); if (k) (byTatva[k] = byTatva[k] || []).push(v); });
+
+  function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+  const root = document.getElementById('themes');
+  root.innerHTML = THEMES.map(th => {
+    const n = th.tatvas.reduce((a,t) => a + (byTatva[t.id] || []).length, 0);
+    const normal = th.tatvas.filter(t => (byTatva[t.id] || []).length <= 3);
+    const soloId = normal.length % 2 ? normal[normal.length - 1].id : null;
+    const entries = th.tatvas.map(t => {
+      const vids = byTatva[t.id] || [];
+      const cls = vids.length > 3 ? ' wide' : (t.id === soloId ? ' solo' : '');
+      const songs = vids.length ? `<div class="songs"><div class="lbl">${vids.length} ${vids.length === 1 ? 'song' : 'songs'}</div><div class="song-grid">` + vids.map(v =>
+        `<button class="song" data-id="${v.id}" data-title="${esc(v.title)}">
+          <span class="th"><img loading="lazy" src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="${esc(v.title)}"><i></i></span>
+          <span class="nm">${esc(v.title)}</span><span class="mt">Tatvam ${v.no} · ${v.dur}</span>
+        </button>`).join('') + '</div></div>' : '';
+      return `<article class="entry${cls}"><div class="no">Tatvam</div><h3>${esc(t.name)}</h3><div class="sub">${esc(t.sub)}</div><p>${esc(t.text)}</p>${songs}</article>`;
+    }).join('');
+    return `<section class="theme" id="${th.key}" data-theme="${th.key}">
+      <div class="wrap">
+        <div class="theme-head">
+          <img class="medal" src="assets/art/${th.medal}.webp" alt="" width="360" height="360">
+          <h2>${esc(th.title)}</h2>
+          <div class="count">${th.tatvas.length} Tatvas · ${n} songs</div>
+        </div>
+        <div class="entries">${entries}</div>
+      </div>
+    </section>`;
+  }).join('');
+
+  /* filter chips + hash links (tatvas.html#wisdom) */
+  const chips = [...document.querySelectorAll('.chip')];
+  const secs = [...document.querySelectorAll('.theme')];
+  function apply(f, scroll){
+    chips.forEach(c => c.classList.toggle('on', c.dataset.f === f));
+    secs.forEach(s => s.hidden = !(f === 'all' || s.dataset.theme === f));
+    if (scroll) { const y = document.getElementById('filters').offsetTop - 66; window.scrollTo({top:y, behavior:'smooth'}); }
+  }
+  chips.forEach(c => c.addEventListener('click', () => {
+    const f = c.dataset.f; apply(f, f !== 'all' || window.scrollY > 600);
+    history.replaceState(null, '', f === 'all' ? location.pathname : '#' + f);
+  }));
+  const h = location.hash.slice(1);
+  if (THEMES.some(t => t.key === h)) { apply(h, false); setTimeout(() => window.scrollTo({top:document.getElementById('filters').offsetTop - 66}), 60); }
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* modal player */
+  const modal = document.getElementById('modal'), frame = document.getElementById('m-frame');
+  root.addEventListener('click', e => {
+    const c = e.target.closest('.song'); if (!c) return;
+    document.getElementById('m-title').textContent = c.dataset.title;
+    document.getElementById('m-yt').href = 'https://www.youtube.com/watch?v=' + c.dataset.id;
+    frame.src = 'https://www.youtube-nocookie.com/embed/' + c.dataset.id + '?autoplay=1&rel=0';
+    modal.classList.add('open'); document.body.style.overflow = 'hidden';
+  });
+  function close(){ modal.classList.remove('open'); frame.src = ''; document.body.style.overflow = ''; }
+  document.getElementById('m-close').onclick = close;
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>

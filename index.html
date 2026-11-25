@@ -147,6 +147,22 @@
   .btn{font-family:"Josefin Sans";text-transform:uppercase;letter-spacing:.22em;font-size:12.5px;padding:17px 30px;text-decoration:none;display:inline-block;margin-top:30px;background:var(--velvet);color:var(--ivory);box-shadow:0 0 0 1px var(--velvet),0 0 0 4px var(--vanilla),0 0 0 5px var(--gold);transition:background .25s,transform .25s}
   .btn:hover{background:var(--berry);transform:translateY(-2px)}
 
+
+  /* ───────── Explore (link to tatvas.html) ───────── */
+  #explore{background:var(--vanilla) var(--paper);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+  #explore .lede{max-width:760px}
+  .paths{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:56px}
+  .path{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:var(--choc);padding:34px 22px 28px;background:var(--ivory);border:1px solid var(--gold);box-shadow:inset 0 0 0 6px var(--ivory),inset 0 0 0 7px rgba(184,144,63,.5),0 22px 40px -28px rgba(78,23,29,.5);transition:transform .35s,box-shadow .35s}
+  .path:hover{transform:translateY(-6px);box-shadow:inset 0 0 0 6px var(--ivory),inset 0 0 0 7px var(--gold),0 28px 44px -26px rgba(78,23,29,.6)}
+  .path img{width:104px;height:104px;border-radius:50%;box-shadow:0 0 0 4px var(--ivory),0 0 0 5.5px var(--gold);margin-bottom:22px;transition:transform .5s}
+  .path:hover img{transform:scale(1.06) rotate(4deg)}
+  .path h3{font-size:25px;font-weight:600;line-height:1.15;color:var(--velvet)}
+  .path small{font-family:"Josefin Sans";font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);margin:10px 0 14px;display:block}
+  .path p{flex:1;font-size:19px;font-style:italic;color:var(--espresso);line-height:1.35}
+  .path .go{margin-top:18px;font-family:"Josefin Sans";font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
+  .explore-cta{text-align:center;margin-top:50px}
+  .explore-cta .btn{margin-top:0}
+
   /* ───────── Smita ───────── */
   #smita .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
   #smita .txt{text-align:center}
@@ -179,6 +195,7 @@
   /* ───────── responsive ───────── */
   @media (max-width:1000px){
     .grid{grid-template-columns:repeat(2,1fr)}
+    .paths{grid-template-columns:repeat(2,1fr)}
     .tabs{grid-template-columns:repeat(2,1fr)}
     .tab:nth-child(3){border-left:0}
     .tab:nth-child(n+3){border-top:1px solid rgba(184,144,63,.7)}
@@ -189,8 +206,10 @@
     body{font-size:19px}
     .wrap{padding:0 20px}
     section{padding:70px 0}
-    nav ul{display:none}
+    nav ul li:not(.keep){display:none}
     .grid{grid-template-columns:1fr;gap:40px}
+    .paths{grid-template-columns:1fr;gap:22px;margin-top:40px}
+    .path{padding:28px 20px 24px}
     .lace{border-width:24px;padding:6px}
     .intro-video{margin-top:44px}
     .play-lg{width:70px;height:70px;margin:-35px 0 0 -35px}
@@ -215,6 +234,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#tatvas">The Tatvas</a></li>
+      <li class="keep"><a href="tatvas.html">Explore</a></li>
       <li><a href="#smita">Smita</a></li>
       <li><a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube</a></li>
     </ul>
@@ -293,6 +313,22 @@
   </div>
 </section>
 
+<!-- ═════════ EXPLORE ═════════ -->
+<section id="explore">
+  <div class="wrap">
+    <div class="orn"><img src="assets/art/lotus-maroon.webp" alt="" width="300" height="158"></div>
+    <h2>Explore the Tatvas</h2>
+    <p class="lede">What stays with us as life changes? How do we find the strength to let go? What does it mean to see another person as our equal? Explore these questions through the songs of Tatvamasi.</p>
+    <div class="paths">
+      <a class="path" href="tatvas.html#devotion"><img src="assets/art/medal-devotion.webp" alt="" width="360" height="360" loading="lazy"><h3>Devotion &amp; Surrender</h3><small data-count="1"></small><p>Singing to the Divine, taking refuge, and praying with a question.</p><span class="go">Read more</span></a>
+      <a class="path" href="tatvas.html#wisdom"><img src="assets/art/medal-wisdom.webp" alt="" width="360" height="360" loading="lazy"><h3>Wisdom &amp; the Self</h3><small data-count="2"></small><p>Who am I beneath my name, my work and the roles I play?</p><span class="go">Read more</span></a>
+      <a class="path" href="tatvas.html#liberation"><img src="assets/art/medal-liberation.webp" alt="" width="360" height="360" loading="lazy"><h3>Letting Go &amp; Liberation</h3><small data-count="3"></small><p>Caring for what is here today while loosening our hold on tomorrow.</p><span class="go">Read more</span></a>
+      <a class="path" href="tatvas.html#together"><img src="assets/art/medal-together.webp" alt="" width="360" height="360" loading="lazy"><h3>Life Together</h3><small data-count="4"></small><p>Honest words, equal dignity, love of country and a prayer for peace.</p><span class="go">Read more</span></a>
+    </div>
+    <div class="explore-cta"><a class="btn" href="tatvas.html">Explore all the Tatvas</a></div>
+  </div>
+</section>
+
 <!-- ═════════ SMITA ═════════ -->
 <section id="smita">
   <div class="wrap">
@@ -312,6 +348,7 @@
     <div class="links">
       <a href="#about">About</a>
       <a href="#tatvas">The Tatvas</a>
+      <a href="tatvas.html">Explore</a>
       <a href="#smita">Smita</a>
       <a href="https://www.youtube.com/@SmitaSpiritual" target="_blank" rel="noopener">YouTube · @SmitaSpiritual</a>
     </div>
@@ -333,6 +370,7 @@
   document.getElementById('stat-released').textContent = V.length;
   document.getElementById('yr').textContent = new Date().getFullYear();
 
+  document.querySelectorAll('.path small').forEach(s => { s.textContent = V.filter(v => v.theme == s.dataset.count).length + ' songs'; });
   const names = {1:'Devotion & Surrender', 2:'Wisdom & the Self', 3:'Letting Go & Liberation', 4:'Life Together'};
   const tabs = [...document.querySelectorAll('.tab')];
   tabs.forEach(t => { t.querySelector('small').textContent = V.filter(v => v.theme == t.dataset.theme).length + ' Tatvas'; });

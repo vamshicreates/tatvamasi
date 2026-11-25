@@ -27,6 +27,6 @@ window.VIDEOS = [
   ["tftW9rlcoAc", "Brahmamokkate", "Sama Tatvam \u00b7 Social Equality & Justice", 1, 5, "Smita", "3:39", "280K", 4],
   ["i3zFV32ugG8", "Vastha Vattidhe", "Advaita Vedanta Tatvam", 1, 4, "Smita, Kalyan Vasanth", "3:35", "259K", 2],
   ["fQK2JWQfPJA", "Bhaja Govindam", "Advaitha Atma Tatvam", 1, 3, "Smita, Datta Sai & Sai", "3:45", "163K", 2],
-  ["ICGK9qK4HEY", "Nimishamainanu", "Moral Wisdom Tatvam", 1, 2, "", "2:50", "115K", 2],
+  ["ICGK9qK4HEY", "Nimishamainanu", "Moral Wisdom Tatvam", 1, 2, "", "2:50", "115K", 4],
   ["-KNaOzP8nbs", "Manasa Sancharare", "Advaitha Bhakti Tatvam", 1, 1, "", "3:10", "244K", 1]
 ];
